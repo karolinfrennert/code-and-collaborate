@@ -4,11 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!--Font Library-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Ricola</title>
   </head>
   <body>
     <header>
-      <img src="./image/ricola-logo.png" alt="" />
+      <!-- <img src="./image/ricola-logo.png" alt="" /> -->
       <nav>
         <img src="./image/hamburger-icon.png" alt="" />
         <a href="#">Home</a>
@@ -17,34 +26,33 @@
       </nav>
     </header>
     <main>
-      <section>
-        <div>
-          <img src="" alt="" />
+      <section class="intro-page">
+        <div class="intro-description">
+          <img src="./image/people-icon.png" alt="" />
           <h1>Introduction and something about 28 steps</h1>
         </div>
-        <div>
+        <div class="intro-cta">
           <h2>Do you want to take on the Ricola challenge?</h2>
-          <button>Start</button>
+          <button class="start-button">Start</button>
         </div>
       </section>
-      <div>
+      <section class="category-intro">
         <h3>What type of person are you?</h3>
         <img src="./image/down-arrow.png" alt="" />
-      </div>
-      <section>
-        <div>
-          <div>
-            <img src="./image/people-icon.png" alt="" />
-            <button>People</button>
-          </div>
-          <div>
-            <img src="./image/business-icon.png" alt="" />
-            <button>Business</button>
-          </div>
-          <div>
-            <img src="./image/nature-icon.png" alt="" />
-            <button>Nature</button>
-          </div>
+      </section>
+      <section class="quiz-intro">
+        <div class="quiz-button-wrapper">
+          <button class="category-button">
+            <img src="./image/people-icon.png" alt="" />People
+          </button>
+
+          <button class="category-button">
+            <img src="./image/business-icon.png" alt="" />Business
+          </button>
+
+          <button class="category-button">
+            <img src="./image/nature-icon.png" alt="" />Nature
+          </button>
         </div>
       </section>
     </main>
