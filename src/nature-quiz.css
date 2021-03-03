@@ -4,4 +4,54 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+button {
+  border-radius: 60%;
+  height: 4rem;
+  width: 4rem;
+}
+
+.button-1 {
+  grid-area: button-1;
+}
+
+.button-2 {
+  grid-area: button-2;
+}
+
+.button-3 {
+  grid-area: button-3;
+}
+
+.button-4 {
+  grid-area: button-4;
+}
+
+.button-5 {
+  grid-area: button-5;
+}
+
+.button-6 {
+  grid-area: button-6;
+}
+
+.button-7 {
+  grid-area: button-7;
+}
+
+.question-grid {
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(1fr, 6);
+  grid-template-rows: repeat(1fr, 8);
+  grid-template-areas:
+    ". . button-7 . . . "
+    ". . . button-6 . ."
+    ". . button-5 . . ."
+    ". . . button-4 . ."
+    ". . . . . button-3 "
+    ". . . button-2 . ."
+    "button-1 . . . . . ";
 }
