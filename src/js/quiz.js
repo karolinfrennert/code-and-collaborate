@@ -56,12 +56,13 @@ let nature = natureQuestions.map(
         flexWrapper.appendChild(nature[id++]);
         console.log(id);
 
-      /*--- IF-STATEMENT TEST ---*/
+      /*
         if(this.id === id.length -1) {
           correctAnswer.display = "none";
           incorrectAnswer1.display = "none";
           incorrectAnswer2.display = "none";
         }
+      */
     }
 
     correctAnswer.addEventListener('click', correctAnswerPrompt);
