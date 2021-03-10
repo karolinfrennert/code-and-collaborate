@@ -83,6 +83,8 @@ let finalCardModal = finalCard.map(({ title, paragraph, link }) => {
   const linkButton = document.createElement("button");
   const linkIndex = document.createElement("a");
 
+  finalWrapper.className = "final-wrapper";
+
   finalTitle.innerText = title;
   finalWrapper.appendChild(finalTitle);
 

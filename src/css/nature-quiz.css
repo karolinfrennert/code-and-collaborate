@@ -1,3 +1,20 @@
+:root {
+  --main-button: #ffcc00;
+  --main-text: #005245;
+}
+
+/* FONTS */
+
+@font-face {
+  font-family: Frutiger;
+  src: url("../resources/fonts/Frutiger.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Frutiger-bold;
+  src: url("../resources/fonts/Frutiger_bold.ttf") format("truetype");
+}
+
 body {
   background-image: url("../image/800px-Matterhorn_from_Domhütte_-_2\ 1.jpg");
   height: 100vh;
@@ -5,9 +22,11 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
+  font-family: Frutiger;
+  color: var(--main-text);
 }
 
-button {
+.button {
   border-radius: 60%;
   height: 4rem;
   width: 4rem;
@@ -66,7 +85,7 @@ button {
   width: 80vw;
   height: 50vh;
   border-radius: 20px;
-  background-color: #fff;
+  background: rgba(255, 255, 255, 0.8);
   margin: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -107,4 +126,36 @@ button {
   color: rgb(150, 148, 148);
   text-decoration: none;
   cursor: pointer;
+}
+
+.card-wrapper,
+.final-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+.card-wrapper button,
+.flex-wrapper button {
+  width: 228px;
+  height: 45px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin: 0.5rem;
+  border: none;
+  border-radius: 50px;
+  background-color: var(--main-button);
+  color: var(--main-text);
+  font-family: Frutiger;
+  font-weight: 700;
+}
+
+.card-wrapper p {
+  padding-left: 2.3rem;
+}
+
+.final-wrapper p {
+  width: 75%;
+  padding-left: 1rem;
 }
