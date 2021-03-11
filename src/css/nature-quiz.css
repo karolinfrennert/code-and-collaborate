@@ -159,3 +159,14 @@ body {
   width: 75%;
   padding-left: 1rem;
 }
+
+.incorrect-promt-div,
+.correct-promt-div {
+  height: 40vh;
+  padding: 0 1rem;
+  margin: 1rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}

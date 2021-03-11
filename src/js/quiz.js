@@ -22,8 +22,21 @@ let nature = natureQuestions.map(
     const incorrectAnswer1 = document.createElement("button");
     const incorrectAnswer2 = document.createElement("button");
 
+    const correctPromtDiv = document.createElement("div");
+    const correctPromtP = document.createElement("p");
+    const incorrectPromtDiv = document.createElement("div");
+    const incorrectPromtP = document.createElement("p");
+
     cardWrapper.className = "card-wrapper";
     cardWrapper.id = id;
+
+    correctPromtP.innerText = correct_prompt;
+    correctPromtDiv.appendChild(correctPromtP);
+    correctPromtDiv.className = "correct-promt-div";
+
+    incorrectPromtP.innerText = incorrect_prompt;
+    incorrectPromtDiv.appendChild(incorrectPromtP);
+    incorrectPromtDiv.className = "incorrect-promt-div";
 
     cardTitle.innerText = heading;
     cardWrapper.appendChild(cardTitle);
@@ -40,25 +53,8 @@ let nature = natureQuestions.map(
     incorrectAnswer2.innerText = incorrect_answer[1];
     cardWrapper.appendChild(incorrectAnswer2);
 
-    const correctAnswerPrompt = () => {
-      flexWrapper.innerHTML = "";
-      flexWrapper.innerHTML = correct_prompt;
-      const nextQuestionButton = document.createElement("button");
-      nextQuestionButton.innerText = "Take the next step";
-      flexWrapper.appendChild(nextQuestionButton);
-      nextQuestionButton.addEventListener("click", displayNextQuestion);
-    };
-
-    const incorrectAnswerPrompt = () => {
-      flexWrapper.innerHTML = "";
-      flexWrapper.innerHTML = incorrect_prompt;
-      const nextQuestionButton = document.createElement("button");
-      nextQuestionButton.innerText = "Take the next step";
-      flexWrapper.appendChild(nextQuestionButton);
-      nextQuestionButton.addEventListener("click", displayNextQuestion);
-    };
-
     const displayNextQuestion = () => {
+      console.log("display next question is done");
       if (id < nature.length) {
         flexWrapper.innerHTML = "";
         flexWrapper.appendChild(nature[id++]);
@@ -66,6 +62,26 @@ let nature = natureQuestions.map(
         flexWrapper.innerHTML = "";
         flexWrapper.appendChild(finalCardModal[0]);
       }
+    };
+
+    let correctAnswerPrompt = () => {
+      console.log("check answer is done");
+      flexWrapper.innerHTML = "";
+      flexWrapper.appendChild(correctPromtDiv);
+      const nextQuestionButton = document.createElement("button");
+      nextQuestionButton.innerText = "Take the next step";
+      correctPromtDiv.appendChild(nextQuestionButton);
+      nextQuestionButton.addEventListener("click", displayNextQuestion);
+    };
+
+    let incorrectAnswerPrompt = () => {
+      console.log("check answer is done");
+      flexWrapper.innerHTML = "";
+      flexWrapper.appendChild(incorrectPromtDiv);
+      const nextQuestionButton = document.createElement("button");
+      nextQuestionButton.innerText = "Take the next step";
+      incorrectPromtDiv.appendChild(nextQuestionButton);
+      nextQuestionButton.addEventListener("click", displayNextQuestion);
     };
 
     correctAnswer.addEventListener("click", correctAnswerPrompt);
