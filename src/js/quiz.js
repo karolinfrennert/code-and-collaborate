@@ -23,34 +23,30 @@ let nature = natureQuestions.map(
     const incorrectAnswer2 = document.createElement("button");
 
     const correctPromtDiv = document.createElement("div");
-    const correctPromtP = document.createElement("p");
     const incorrectPromtDiv = document.createElement("div");
-    const incorrectPromtP = document.createElement("p");
 
     cardWrapper.className = "card-wrapper";
     cardWrapper.id = id;
 
-    correctPromtP.innerText = correct_prompt;
-    correctPromtDiv.appendChild(correctPromtP);
+    correctPromtDiv.innerHTML = correct_prompt;
     correctPromtDiv.className = "correct-promt-div";
 
-    incorrectPromtP.innerText = incorrect_prompt;
-    incorrectPromtDiv.appendChild(incorrectPromtP);
+    incorrectPromtDiv.innerHTML = incorrect_prompt;
     incorrectPromtDiv.className = "incorrect-promt-div";
 
-    cardTitle.innerText = heading;
+    cardTitle.innerHTML = heading;
     cardWrapper.appendChild(cardTitle);
 
-    questionParagraph.innerText = question;
+    questionParagraph.innerHTML = question;
     cardWrapper.appendChild(questionParagraph);
 
-    correctAnswer.innerText = correct_answer;
+    correctAnswer.innerHTML = correct_answer;
     cardWrapper.appendChild(correctAnswer);
 
-    incorrectAnswer1.innerText = incorrect_answer[0];
+    incorrectAnswer1.innerHTML = incorrect_answer[0];
     cardWrapper.appendChild(incorrectAnswer1);
 
-    incorrectAnswer2.innerText = incorrect_answer[1];
+    incorrectAnswer2.innerHTML = incorrect_answer[1];
     cardWrapper.appendChild(incorrectAnswer2);
 
     const displayNextQuestion = () => {
@@ -64,7 +60,7 @@ let nature = natureQuestions.map(
       }
     };
 
-    let correctAnswerPrompt = () => {
+    const correctAnswerPrompt = () => {
       console.log("check answer is done");
       flexWrapper.innerHTML = "";
       flexWrapper.appendChild(correctPromtDiv);
@@ -74,7 +70,7 @@ let nature = natureQuestions.map(
       nextQuestionButton.addEventListener("click", displayNextQuestion);
     };
 
-    let incorrectAnswerPrompt = () => {
+    const incorrectAnswerPrompt = () => {
       console.log("check answer is done");
       flexWrapper.innerHTML = "";
       flexWrapper.appendChild(incorrectPromtDiv);
